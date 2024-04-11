@@ -13,12 +13,26 @@ function Fdcalc() {
   const [TotalAmount, setTotalAmount] = useState(0)
 
 
-  const calculateMUL = () => {
+  const calculateFDMaturityValue = () => {
     if (isNaN(cost) || cost <= 0 || isNaN(Interest) || Interest <= 0 || isNaN(Tenure) || Tenure <= 0) {
       return { error: 'Invalid input parameters' };
     }
+    // Convert rate from percentage to decimal
+    const rateDecimal = Interest / 100;
+  
+    // Calculate the maturity value using the FD formula
+    const maturityValue = principal * Math.pow(1 + rateDecimal, Tenure);
+  
+    return maturityValue;
     
   }
+  function calculateFDInterest(principal, rate, tenure) {
+    const maturityValue = calculateFDMaturityValue(principal, rate, tenure);
+    const interest = maturityValue - principal;
+  
+    return interest;
+  }
+  
   
   const handelInputValue = (e) => {
     setCost(e.target.value)
@@ -45,7 +59,7 @@ function Fdcalc() {
   }
 
   useEffect(() => {
-    calculateMUL();
+    calculateFd();
   }, [cost, Interest, Tenure]);
   return (
     <>

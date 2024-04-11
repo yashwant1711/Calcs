@@ -4,15 +4,18 @@ import { NavLink, Link } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <div className="text-xl font-bold text-gray-500 flex gap-2 items-center p-4">
+      <div className="text-2xl font-bold text-gray-500 flex gap-2 items-center p-4">
         <NavLink to="/">
           <h2>Navi </h2>
         </NavLink>
         <h2> &gt;</h2>
         <h2> Calculators</h2>
       </div>
-      <div className="content"></div>
-      <div className="flex flex-row gap-2 flex-wrap m-4 justify-evenly max-w-fit border-2 border-blue-500">
+      <div className="content text-center">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl ">Calculators</h1>
+        <p className="mb-3 text-gray-500 dark:text-gray-400">Calculate EMI, SIP, interest, government scheme amounts easily with the following Navi calculators</p>
+      </div>
+      <div className="flex flex-row gap-2 flex-wrap m-4 justify-evenly max-w-fit">
         <div className="1st block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <Link to={"/emi"} href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -50,7 +53,7 @@ function Home() {
               Mutual Fund
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Calculate your estimated SIP returns in seconds
+            Calculated estimated returns on your mutual fund investments
             </p>
             <div className="flex justify-end">
               <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/MF.svg" alt="" />
@@ -67,7 +70,7 @@ function Home() {
             Lumpsum Calculator
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Calculate your estimated SIP returns in seconds
+            Calculate returns on your lump-sum mutual fund investments
             </p>
             <div className="flex justify-end">
               <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/PPF.svg" alt="" />
@@ -80,7 +83,7 @@ function Home() {
               Home Loan EMI
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Calculate your estimated SIP returns in seconds
+            Calculate your Home Loan EMIs in seconds
             </p>
             <div className="flex justify-end">
             <img
