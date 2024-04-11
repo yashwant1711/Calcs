@@ -21,7 +21,11 @@ function Home() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Calculate your Personal Loan EMIs in seconds
             </p>
+            <div className="flex justify-end">
+            <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/PL.svg" alt="" />
+          </div>
           </Link>
+         
         </div>
         <div className="2nd block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <Link to={"/sip"} href="#">
@@ -31,62 +35,76 @@ function Home() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Calculate your estimated SIP returns in seconds
             </p>
+          <div className="flex justify-end">
+            <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/SIP.svg" alt="" />
+          </div>
           </Link>
         </div>
         <div className="3rd">
           <Link
-            to={"/sip"}
+            to={"/mul"}
             href="#"
             className="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              SIP Calculator
+              Mutual Fund
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Calculate your estimated SIP returns in seconds
             </p>
+            <div className="flex justify-end">
+              <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/MF.svg" alt="" />
+            </div>
           </Link>
         </div>
         <div className="4th">
           <Link
-            to={"/sip"}
+            to={"/lumscal"}
             href="#"
             className="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              SIP Calculator
+            Lumpsum Calculator
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Calculate your estimated SIP returns in seconds
             </p>
+            <div className="flex justify-end">
+              <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/PPF.svg" alt="" />
+            </div>
           </Link>
         </div>
         <div className="5th block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <Link to={"/sip"} href="#">
+          <Link to={"/homl"} href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Home Loan EMI
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Calculate your estimated SIP returns in seconds
             </p>
+            <div className="flex justify-end">
             <img
               src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/HL.svg"
               alt="img"
             />
+            </div>
           </Link>
         </div>
         <div className="6th">
           <Link
-            to={"/sip"}
+            to={"/fdcal"}
             href="#"
             className="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              SIP Calculator
+            Fixed Deposit (FD)
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Calculate your estimated SIP returns in seconds
+            Calculate your FD returns without any hassle
             </p>
+            <div className="flex justify-end">
+              <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/FD.svg" alt="" />
+            </div>
           </Link>
         </div>
       </div>

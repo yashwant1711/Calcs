@@ -5,6 +5,10 @@ import Emi from '../src/calculator/EmiCalc/Emi';
 import Sip from './calculator/SipCalc/Sip';
 import './index.css'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
+import HomeL from './calculator/HomLCalc/HomeL.jsx';
+import Mutualfund from './calculator/Mutualfund/MutuF.jsx';
+import Lumsumcalc from './calculator/Lumsum/LumsumCalc.jsx';
+import Fdcalc from './calculator/FdCalc/Fdcalc.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +22,22 @@ const router = createBrowserRouter([
   {
     path: "/sip",
     element: <Sip/>,
+  },
+  {
+    path: "/homl",
+    element: <HomeL/>
+  },
+  {
+    path: "/mul",
+    element: <Mutualfund/>
+  },
+  {
+    path: "/lumscal",
+    element: <Lumsumcalc/>
+  },
+  {
+    path: "/fdcal",
+    element: <Fdcalc/>
   }
 ])
 
