@@ -13,7 +13,7 @@ function Home() {
       </div>
       <div className="content text-center">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl ">Calculators</h1>
-        <p className="mb-3 text-gray-500 dark:text-gray-400">Calculate EMI, SIP, interest, government scheme amounts easily with the following Navi calculators</p>
+        <p className="mb-3 text-xl text-gray-500 dark:text-gray-400">Calculate EMI, SIP, interest, government scheme amounts easily with the following Navi calculators</p>
       </div>
       <div className="flex flex-row gap-2 flex-wrap m-4 justify-evenly max-w-fit">
         <div className="1st block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -28,7 +28,6 @@ function Home() {
             <img src="https://public-assets.prod.navi-tech.in/navi-website-assests/images/calculators-landing-page/PL.svg" alt="" />
           </div>
           </Link>
-         
         </div>
         <div className="2nd block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <Link to={"/sip"} href="#">

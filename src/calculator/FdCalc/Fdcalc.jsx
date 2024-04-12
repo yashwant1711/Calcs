@@ -5,33 +5,42 @@ import { NavLink } from "react-router-dom";
 
 
 function Fdcalc() {
-  const [cost, setCost] = useState(25000);
-  const [Interest, setInterest] = useState(12)
+  const [cost, setCost] = useState(100000);
+  const [Interest, setInterest] = useState(8)
   const [Tenure, setTenure] = useState(10)
   const [Fd, setFd] = useState(0)
   const [ereturns, setErturns] = useState(0)
   const [TotalAmount, setTotalAmount] = useState(0)
 
 
-  const calculateFDMaturityValue = () => {
-    if (isNaN(cost) || cost <= 0 || isNaN(Interest) || Interest <= 0 || isNaN(Tenure) || Tenure <= 0) {
-      return { error: 'Invalid input parameters' };
-    }
+  function calculateSimpleInterest(principal, rate, tenure) {
     // Convert rate from percentage to decimal
-    const rateDecimal = Interest / 100;
+    const rateDecimal = rate / 100;
   
-    // Calculate the maturity value using the FD formula
-    const maturityValue = principal * Math.pow(1 + rateDecimal, Tenure);
+    // Calculate simple interest
+    const simpleInterest = principal * rateDecimal * tenure;
   
-    return maturityValue;
+    return simpleInterest;
+  }
+  
+
+  function calculateFd(){
+    // const principal = cost; // Initial investment amount
+    // const rate = Interest; // Interest rate (in percentage)
+    // const tenure = Tenure; // Tenure in years
+    // const compoundingPeriods = 4; // Compounding quarterly
     
+    const simpleInterest = calculateSimpleInterest(cost, Interest, Tenure);
+    // const compoundInterest = calculateCompoundInterest(cost, Interest, Tenure, compoundingPeriods);
+    
+    console.log(`Simple Interest: ${simpleInterest.toFixed(2)}`);
+    // console.log(`Compound Interest: ${compoundInterest.toFixed(2)}`);
+    setFd(Math.round(cost).toLocaleString(undefined))
+    setErturns(Math.round(simpleInterest).toLocaleString(undefined))
+    const total = Math.round(simpleInterest) + Math.round(cost)
+    setTotalAmount(Math.round(total).toLocaleString(undefined))
   }
-  function calculateFDInterest(principal, rate, tenure) {
-    const maturityValue = calculateFDMaturityValue(principal, rate, tenure);
-    const interest = maturityValue - principal;
-  
-    return interest;
-  }
+
   
   
   const handelInputValue = (e) => {
