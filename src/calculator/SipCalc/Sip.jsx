@@ -80,7 +80,7 @@ function Sip() {
   return (
     <>
       <div className="p-4 w-screen h-screen bg-zinc-100">
-        <div className="text-xl font-bold text-gray-500 flex gap-2">
+        <div className="text-2xl font-bold text-gray-500 flex gap-2">
           <h2>Navi </h2>
           <h2> &gt;</h2>
           <Link to="/">
